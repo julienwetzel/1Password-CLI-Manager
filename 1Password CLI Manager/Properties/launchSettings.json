@@ -1,0 +1,23 @@
+{
+  "profiles": {
+    "Update debug": {
+      "commandName": "Project",
+      "commandLineArgs": "--cli-update"
+    },
+    "Standard Debug": {
+      "commandName": "Project"
+    },
+    "Help": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    },
+    "Cli version": {
+      "commandName": "Project",
+      "commandLineArgs": "cli --version"
+    },
+    "Notify": {
+      "commandName": "Project",
+      "commandLineArgs": "notify"
+    }
+  }
+}

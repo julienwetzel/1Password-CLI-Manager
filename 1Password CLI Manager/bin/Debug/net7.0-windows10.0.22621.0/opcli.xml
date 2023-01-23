@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>opcli</name>
+    </assembly>
+    <members>
+        <member name="P:Classes.AccessAssembly.CompanyName">
+            Get the name of the system provider name from the assembly ///  
+        </member>
+        <member name="P:Classes.AccessAssembly.ProductVersion">
+             
+            Get System version from the assembly ///  
+        </member>
+        <member name="P:Classes.AccessAssembly.ProductName">
+             
+            Get the name of the System from the assembly ///  
+        </member>
+        <member name="P:Classes.AccessAssembly.CopyRightsDetail">
+             
+            Get the copyRights details from the assembly ///  
+        </member>
+        <member name="P:Classes.AccessAssembly.ProductTitle">
+             
+            Get the Product tile from the assembly ///  
+        </member>
+        <member name="P:Classes.AccessAssembly.ProductDescription">
+             
+            Get the description of the product from the assembly ///  
+        </member>
+        <member name="M:Classes.Cmd.RunAs(System.String,System.String)">
+            <summary> Démarre un exécutable en mode admin </summary>
+            <param name="path"> Le chemin d'accès à l'exécutable. </param>
+            <param name="args"> L'argument à passer à l'éxecutable. </param>
+            <returns> L'objet Process </returns>
+        </member>
+        <member name="M:Classes.Cmd.IsUrl(System.String)">
+            <summary> Vérifie si la valeur reçue est une URL </summary>
+            <param name="url"> L'url à tester. </param>
+            <returns> true si vrai </returns>
+        </member>
+        <member name="M:Classes.Cmd.IsPath(System.String)">
+            <summary> Vérifie si la variable reçue est un chemin de dossier </summary>
+            <param name="path"> Le chemin à tester </param>
+            <returns> true si vrai </returns>
+        </member>
+        <member name="M:Classes.Cmd.IsVersion(System.String)">
+            <summary> Vérifie si la valeur reçue est une version </summary>
+            <param name="version"> Valeur à tester </param>
+            <returns> true si vrai </returns>
+        </member>
+        <member name="M:Classes.Cmd.IsAdministrator">
+            <summary> Vérifie si le programme fonctionne avec une élévation de privilège </summary>
+            <returns> true si vrai </returns>
+        </member>
+        <member name="M:Classes.Cmd.IsWebAvailable(System.String)">
+            <summary> Vérifie si le site web est accessible</summary>
+            <returns> true si vrai</returns>
+        </member>
+        <member name="M:Classes.Cmd.ExistsOnPath(System.String)">
+            <summary>
+            Vérifie si un fichier existe dans un des répertoires du PATH
+            </summary>
+            <param name="fileName">Nom du fichier à rechercher</param>
+            <returns>true s'il existe</returns>
+        </member>
+        <member name="M:Classes.Cmd.GetPaths(System.String)">
+            <summary>
+            Cette méthode recherche le chemin complet et le chemin du répertoire d'un fichier
+            </summary>
+            <param name="fileName">Nom du fichier à rechercher</param>
+            <returns>Chemin complet et chemin du répertoire du fichier</returns>
+        </member>
+        <member name="M:Classes.Cmd.ExtractOnlineZip(System.String,System.String)">
+            <summary>
+            Extraire le contenu d'un fichier ZIP sur le web dans un dossier local
+            </summary>
+            <param name="url">URL du fichier zip</param>
+            <param name="path">Chemin d'accès du dossier d'extraction</param>
+        </member>
+        <member name="T:opcli.Program">
+            <summary>
+            The program.
+            </summary>S
+        </member>
+        <member name="M:opcli.Program.Main(System.String[])">
+            <summary>
+            TODO: Add Summary
+            </summary>
+            <param name="args">The args.</param>
+            <returns><![CDATA[Task<int>]]></returns>
+        </member>
+        <member name="T:Services.OnePasswordCli.Notification.Notification">
+            <summary>
+            The notification.
+            </summary>
+        </member>
+        <member name="M:Services.OnePasswordCli.Notification.Notification.ShowErrorNotification(System.String)">
+            <summary> Affiche une erreur </summary>
+            <param name="message"> Message de l'erreur à afficher </param>
+        </member>
+        <member name="M:Services.OnePasswordCli.Notification.Notification.ShowUpdate">
+            <summary>
+            Shows the update notification.
+            </summary>
+        </member>
+        <member name="T:Services.OnePasswordCli.OnePasswordCli">
+            <summary>
+            The OnePasswordCli class is a static class for the OnePassword command line
+            tool.
+            </summary>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.ExecutableName">
+            <summary>
+            The ExecutableName property is a string that contains the name of the 
+            executable.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="T:Services.OnePasswordCli.OnePasswordCli.Local">
+            <summary>
+            The Local subclass contains properties and methods related of the 
+            OnePassword tool.
+            </summary>
+            <remarks>
+                <para>
+                    To access the information, simply enter the following code to access the property values 
+                    <code>OnePasswordCli.Local.&lt;Property&gt;</code>
+                    <br/>Properties:
+                    <list type="bullet">
+                        <item>ProgramDirectory</item>
+                        <item>AbsolutePath</item>
+                        <item>Version</item>
+                        <item>IsAvailable</item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Local.ProgramDirectory">
+            <summary>
+            The ProgramDirectory property is a string that contains the path 
+            to the local program directory.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Local.AbsolutePath">
+            <summary>
+            The AbsolutePath property is a string that contains the absolute path 
+            of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Local.Version">
+            <summary>
+            The Version property is a string that contains the version of the local
+            version of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Local.IsAvailable">
+            <summary>
+            The IsAvailable property is a bool that determines if the OnePassword 
+            tool is installed.
+            </summary>
+            <value>A bool.</value>
+        </member>
+        <member name="T:Services.OnePasswordCli.OnePasswordCli.Online">
+            <summary>
+            The Online subclass contains properties and methods related to the online 
+            version of the OnePassword tool.
+            </summary>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Online.Version">
+            <summary>
+            The Version property is a string that contains the version of the online 
+            version of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Online.IsReachable">
+            <summary>
+            The IsReachable property is a bool that determines if the online version 
+            of the OnePassword tool is reachable.
+            </summary>
+            <value>A bool.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Online.IsUpdateAvailable">
+            <summary>
+            The IsUpdateAvailable property is a bool that determines if a new version is 
+            available
+            </summary>
+            <value>A bool.</value>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.Online.UriDownload(System.String)">
+            <summary>
+            The UriDownload method a string that contains the path to download the 
+            online version of the OnePassword tool.
+            </summary>
+            <param name="v">The v.</param>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Online.UriVersion">
+            <summary>
+            The UriVersion property is a string that contains the URI to get the 
+            online version of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Online.UriDomainDownload">
+            <summary>
+            The UriDomainDownload property is a string that contains the URI for the 
+            domain download for the online version of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="T:Services.OnePasswordCli.OnePasswordCli.Print">
+            <summary>
+            The Print subclass contains properties and methods related to printing 
+            information about the OnePassword tool.
+            </summary>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Print.Versions">
+            <summary>
+            The Versions property is a string that contains the formatting for the 
+            versions table.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="P:Services.OnePasswordCli.OnePasswordCli.Print.Network">
+            <summary>
+            The Network property is a string that contains the network status of the 
+            online version of the OnePassword tool.
+            </summary>
+            <value>A string.</value>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetLocalProgramDirectory">
+            <summary>
+            Récupération du répertoire local du programme 
+            </summary>
+            <returns> Chemin en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetLocalAbsolutePath">
+            <summary>
+            Récupération du chemin absolu du programme
+            </summary>
+            <returns> Chemin en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetLocalVersion">
+            <summary>
+            Récupération de la version locale
+            </summary>
+            <returns> version en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.IsLocalAvailablePath">
+            <summary>
+            Vérifie si le chemin vers le programme est disponible
+            </summary>
+            <returns> true si oui </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetOnlineVersionOnWeb">
+            <summary>
+            Méthode pour récupérer la version sur le web
+            </summary>
+            <returns> Numéro de version en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetOnlineVersionOnCli">
+            <summary>
+            Méthode pour récupérer la version sur le programme
+            </summary>
+            <returns> Numéro de version en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetOnlineVersion">
+            <summary>
+            Méthode pour récupérer la version en ligne
+            </summary>
+            <returns> Numéro de version en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetOnlineWebStatus">
+            <summary>
+            Cette méthode retourne un tableau sur les statuts de connexion
+            </summary>
+            <returns> Tableau en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.IsOnlineReachable">
+            <summary>
+            Cette méthode retourne une valeur booléenne selon si les sites web de OnePassword sont disponibles
+            ou non
+            </summary>
+            <returns> 
+                <para>
+                    <b>True</b>&#160;&#160;Websites are reachable<br/>
+                    <b>False</b> Websites not reachable
+                </para> 
+            </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetUriDownload(System.String)">
+            <summary> 
+            Cette méthode retourne l'URI de téléchargement du programme spécifié
+            Utilise l'architecture spécifiée et la version en ligne
+            </summary>
+            <param name="version"> Version de l'application </param>
+            <returns> Lien de téléchargement </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.GetVersionsTableFormat">
+            <summary> 
+            Cette méthode retourne un tableau avec la version Online
+            disponible et la version locale actuel
+            </summary>
+            <returns> Tableau en string </returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.OnePasswordCli.IsOnlineUpdateAvailable">
+            <summary>
+            Cette méthode retourne une valeur booléenne
+            </summary>
+            <returns>A bool.</returns>
+        </member>
+        <member name="M:Services.OnePasswordCli.Update.Update.UpdateOp(System.String)">
+            <summary> Processus de mise à jour </summary>
+            <param name="version"> Numéro de version à installer </param>
+        </member>
+    </members>
+</doc>
